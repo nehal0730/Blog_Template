@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
 .navigation {
     margin-top: 25px;
     font-family: var(--font1);
@@ -45,6 +51,7 @@
 .nav-left ul li a:hover {
     color: var(--main-bg-color);
     font-weight: bolder;
+    cursor: pointer;
 }
 
 .content {
@@ -139,3 +146,82 @@ position: relative;
 .footer a {
     color: white;
 }
+
+.scroll-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.scroll-buttons button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #555;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.scroll-buttons button:hover {
+    opacity: 1;
+}
+
+.scroll-button {
+    position: fixed;
+    right: 20px;
+    bottom: 70px;
+    /* display: flex;
+    flex-direction: row;
+    gap: 10px; */
+}
+
+.scroll-button button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #555;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.scroll-button button:hover {
+    opacity: 1;
+}
+
+.highlight {
+    background-color: yellow; /* Highlight with yellow */
+    font-weight: bold; /* Make the highlighted text bold */
+}
+
+#themeToggle:hover {
+    color: var(--main-bg-color);
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #b0b0b0;
+    li a {
+        color: white;
+    }
+    .home-articles {
+        background-color: #242424;
+    }
+    .home-article-content a {
+        color: #e0e0e0;
+    }
+  }

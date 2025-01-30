@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.png">
     <title>iBlog - Heaven for bloggers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
@@ -19,12 +21,13 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="/">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li id="themeToggle"><a href="/">Dark Mode</a></li>
             </ul>
         </div>
         <div class="nav-right">
-            <form action="search.html" method="get">
-                <input class="form-input" type="text" name="query" placeholder="Article Search">
-                <button class="btn">Search</button>
+            <form action="search.html" method="get" id="search-form">
+                <input class="form-input" type="text" name="query" id="search-input" placeholder="Article Search">
+                <button class="btn" type="submit">Search</button>
             </form>
         </div>
     </nav>
@@ -72,10 +75,10 @@
             </div>
             <div class="home-article-content font1">
                 <a href="/blogpost.html"><a href="blogpost.html">
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                        <h3>The Best Tools for Graphic Designers in 2025.</h3>
                     </a></a>
-                <div>Auther Name</div>
-                <span>07 January | 6 min read</span>
+                    <div>Chris Brown</div>
+                    <span>15 January | 6 min read</span>
             </div>
         </div>
         <div class="home-article">
@@ -84,10 +87,10 @@
             </div>
             <div class="home-article-content font1">
                 <a href="blogpost.html">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    <h3>Understanding Django for Beginners.</h3>
                 </a>
-                <div>Auther Name</div>
-                <span>07 January | 6 min read</span>
+                <div>Alice Johnson</div>
+        <span>14 January | 5 min read</span>
             </div>
         </div>
         <div class="home-article">
@@ -96,10 +99,10 @@
             </div>
             <div class="home-article-content font1">
                 <a href="blogpost.html">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    <h3>How to Learn JavaScript Efficiently.</h3>
                 </a>
-                <div>Auther Name</div>
-                <span>07 January | 6 min read</span>
+                <div>Paul Harris</div>
+                <span>13 January | 7 min read</span>
             </div>
         </div>
         <div class="home-article">
@@ -108,10 +111,10 @@
             </div>
             <div class="home-article-content font1">
                 <a href="blogpost.html"><a href="blogpost.html">
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                        <h3>Exploring the Future of AI in Healthcare.</h3>
                     </a></a>
-                <div>Auther Name</div>
-                <span>07 January | 6 min read</span>
+                    <div>Linda Green</div>
+                    <span>11 January | 6 min read</span>
             </div>
         </div>
         <div class="home-article">
@@ -120,10 +123,10 @@
             </div>
             <div class="home-article-content font1">
                 <a href="blogpost.html">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    <h3>Top 10 Programming Languages to Learn in 2025.</h3>
                 </a>
-                <div>Auther Name</div>
-                <span>07 January | 6 min read</span>
+                <div>Mark Taylor</div>
+        <span>09 January | 5 min read</span>
             </div>
         </div>
         <div class="home-article">
@@ -132,10 +135,10 @@
             </div>
             <div class="home-article-content font1">
                 <a href="blogpost.html">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    <h3>How to Build a Successful Freelance Business.</h3>
                 </a>
-                <div>Auther Name</div>
-                <span>07 January | 6 min read</span>
+                <div>Mary Ann</div>
+        <span>12 January | 9 min read</span>
             </div>
         </div>
         <div class="home-article">
@@ -144,10 +147,10 @@
             </div>
             <div class="home-article-content font1">
                 <a href="blogpost.html">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    <h3>Understanding the Basics of Blockchain Technology.</h3>
                 </a>
-                <div>Auther Name</div>
-                <span>07 January | 6 min read</span>
+                <div>John Smith</div>
+        <span>08 January | 7 min read</span>
             </div>
         </div>
         <div class="home-article">
@@ -156,10 +159,10 @@
             </div>
             <div class="home-article-content font1">
                 <a href="blogpost.html">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    <h3>Social Media Marketing Trends You Need to Follow.</h3>
                 </a>
-                <div>Auther Name</div>
-                <span>07 January | 6 min read</span>
+                <div>Jane Doe</div>
+                <span>10 January | 8 min read</span>
             </div>
         </div>
     </div>
@@ -168,6 +171,30 @@
         <p>Copyright &copy; iBlog.com</p>
         <a href="https://www.vecteezy.com/free-vector/typewriter">Vector Credits: Vecteezy</a>
     </div>
+
+    <!-- Scroll Buttons -->
+    <div class="scroll-buttons">
+        <button id="scroll-to-top" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+        <button id="scroll-to-bottom" title="Go to bottom"><i class="fa-solid fa-arrow-down"></i></button>
+    </div>
+
+    <div class="scroll-button">
+        <a href="comments.html">
+        <button id="comm" title="Comments">
+            <i class="fa-regular fa-comment"></i></button>
+        </a>
+    </div>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Clear the search input field when the page loads
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) {
+                searchInput.value = ''; // Clear the input field
+            }
+        });
+    </script> -->
+    <script src="./js/app.js"></script>
 </body>
 
 </html>

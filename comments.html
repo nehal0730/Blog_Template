@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/comments.css">
 </head>
 
 <body>
@@ -31,50 +31,33 @@
             </form>
         </div>
     </nav>
-    
+
     <div class="max-width-1 m-auto"><hr></div>
 
     <div class="contact-content font1 max-width-1 m-auto">
-        <div class="max-width-1 m-auto mx-2">
-            <h2>Feel Free to Contact Us</h2>
-            <form id="contact-form" onsubmit="return validateForm()">
-                <div class="form-box">
-                    <input type="text" id="name" placeholder="Enter Your Name" required>
-                </div>
-                <div class="form-box">
-                    <input type="text" id="pno" placeholder="Enter Your Phone Number" required>
-                </div>
-                <div class="form-box">
-                    <input type="text" id="email" placeholder="Enter Your Email Id" required>
-                </div>
-                <div class="form-box">
-                    <textarea name="" id="message" cols="30" rows="10" placeholder="How may we help you?" required></textarea>
-                </div>
-                <div class="form-box">
-                    <button class="btn" type="submit">Submit</button>
-                </div>
-            </form>
+        <div class="max-width-1 m-auto mx-2" id="comments-section">
+            <h2>Comments</h2>
+            <ul id="comments-list">
+                <!-- Existing comments will be displayed here -->
+              </ul>
+              <form id="comment-form">
+                <textarea id="comment-input" placeholder="Write a comment..." required></textarea>
+                <button type="submit">Post Comment</button>
+              </form>
         </div>
     </div>
 
-    <div class="footer max-width-1 m-auto">
+    <div class="footer m-auto">
         <p>Copyright &copy; iBlog.com</p>
         <a href="https://www.vecteezy.com/free-vector/typewriter">Vector Credits: Vecteezy</a>
     </div>
 
-    <div class="scroll-buttons">
+    <!-- <div class="scroll-buttons">
         <button id="scroll-to-top" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
         <button id="scroll-to-bottom" title="Go to bottom"><i class="fa-solid fa-arrow-down"></i></button>
-    </div>
+    </div> -->
 
-    <div class="scroll-button">
-        <a href="comments.html">
-        <button id="comm" title="Comments">
-            <i class="fa-regular fa-comment"></i></button>
-        </a>
-    </div>
-
-    <script src="./js/contact.js"></script>
+    <script src="./js/comments.js"></script>
     <script src="./js/app.js"></script>
 
 </body>
